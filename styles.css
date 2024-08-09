@@ -1,0 +1,115 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e9ecef;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  position: relative;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #343a40;
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  width: calc(100% - 24px); /* Adjust width to fit within container */
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#message {
+  margin-top: 10px;
+  color: #dc3545; /* Red color for error messages */
+  font-weight: bold;
+  text-align: center;
+}
+
+.suggestions {
+  position: absolute;
+  top: 40%; /* Position directly below the item input */
+  left: 10;
+  width: calc(100% - 64px);
+  border: 1px solid #ced4da;
+  background: #ffffff;
+  z-index: 1000;
+  max-height: 180px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2px; /* Space between the input and suggestions */
+}
+
+.suggestions div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background-color: #f1f3f5;
+}
+#continue-btn:hover{
+  background-color: #388E3C; /* Darker Green */
+}
+#continue-btn{
+  background-color: #4CAF50; /* Green */
+}
+#exit-btn {
+  background-color: #F44336; /* Red */
+}
+
+#exit-btn:hover {
+  background-color: #C62828; /* Darker Red */
+}
+#restart-btn {
+  background-color: #FF9800; /* Orange */
+}
+
+#restart-btn:hover {
+  background-color: #F57C00; /* Darker Orange */
+}
