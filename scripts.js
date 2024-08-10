@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantity = quantityInput.value;
 
     if (partyName && item && quantity) {
-      entries.push({ partyName, item, price: price || 'N/A', quantity }); // Default price to 'N/A' if not provided
+      entries.push({ parstyName, item, price: price || '', quantity }); // Default price to 'N/A' if not provided
       clearInputs(false); // Do not clear party name
     } else {
       showMessage('Party Name, Item, and Quantity are required fields.');
