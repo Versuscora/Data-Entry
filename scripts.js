@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addEntry() {
-    const PartyName = partyNameInput.value;
-    const Item = itemInput.value;
-    const Price = priceInput.value; // Price is optional
-    const Quantity = quantityInput.value;
+    const partyName = partyNameInput.value;
+    const item = itemInput.value;
+    const price = priceInput.value; // Price is optional
+    const quantity = quantityInput.value;
 
-    if (PartyName && Item && Quantity) {
-      entries.push({ PartyName, Item, Price: price || '', Quantity }); // Default price to 'N/A' if not provided
-      clearInputs();
+    if (partyName && item && quantity) {
+      entries.push({ partyName, item, price: price || 'N/A', quantity }); // Default price to 'N/A' if not provided
+      clearInputs(false); // Do not clear party name
     } else {
       showMessage('Party Name, Item, and Quantity are required fields.');
     }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function restartProgram() {
     entries = [];
-    clearInputs();
+    clearInputs(true); // Clear all inputs including party name
     showMessage('Entries cleared');
   }
 
@@ -85,8 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
     XLSX.writeFile(wb, 'data_entries.xlsx');
   }
 
-  function clearInputs() {
-    partyNameInput.value = '';
+  function clearInputs(clearPartyName) {
+    if (clearPartyName) {
+      partyNameInput.value = '';
+    }
     itemInput.value = '';
     priceInput.value = '';
     quantityInput.value = '';
