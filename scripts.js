@@ -32,9 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
           const json = XLSX.utils.sheet_to_json(firstSheet);
           
-          // Extract items from column B (usually 'B' in Excel is the second column)
           if (json.length > 0) {
-            items = json.map(row => row[Object.keys(row)[1]]).filter(item => item); // Column B is index 1
+            items = json.map(row => row[Object.keys(row)[1]]).filter(item => item);
             showSuggestions(); // Update suggestions based on the new list
           }
         } catch (error) {
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantity = quantityInput.value;
 
     if (partyName && item && quantity) {
-      entries.push({ partyName, item, price: price || '', quantity }); // Default price to 'N/A' if not provided
+      entries.push({ partyName, item, price: price || 'N/A', quantity });
       clearInputs(false); // Do not clear party name
     } else {
       showMessage('Party Name, Item, and Quantity are required fields.');
