@@ -4,12 +4,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #e9ecef;
+  background-color: #E8F0F2; /* Light Blue */
   margin: 0;
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: #FFFFFF; /* White */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -20,7 +20,7 @@ body {
 h1 {
   font-size: 26px;
   margin-bottom: 20px;
-  color: #343a40;
+  color: #2C3E50; /* Charcoal Gray */
   text-align: center;
 }
 
@@ -29,7 +29,7 @@ input, button {
   margin: 10px 0;
   padding: 12px;
   width: calc(100% - 24px); /* Adjust width to fit within container */
-  border: 1px solid #ced4da;
+  border: 1px solid #B0BEC5; /* Light Blue Gray */
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 16px;
@@ -41,13 +41,13 @@ input {
 }
 
 input:focus {
-  border-color: #007bff;
+  border-color: #1E90FF; /* Dodger Blue */
   outline: none;
 }
 
 button {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #1E90FF; /* Dodger Blue */
+  color: #FFFFFF; /* White */
   border: none;
   cursor: pointer;
   font-size: 18px;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #1C75D6; /* Dark Dodger Blue */
 }
 
 button:active {
@@ -65,7 +65,7 @@ button:active {
 
 #message {
   margin-top: 10px;
-  color: #dc3545; /* Red color for error messages */
+  color: #2C3E50; /* Charcoal Gray */
   font-weight: bold;
   text-align: center;
 }
@@ -75,8 +75,8 @@ button:active {
   top: 40%; /* Position directly below the item input */
   left: 10;
   width: calc(100% - 64px);
-  border: 1px solid #ced4da;
-  background: #ffffff;
+  border: 1px solid #B0BEC5; /* Light Blue Gray */
+  background: #ECF6F9; /* Very Light Blue */
   z-index: 1000;
   max-height: 180px;
   overflow-y: auto;
@@ -91,25 +91,37 @@ button:active {
 }
 
 .suggestions div:hover {
-  background-color: #f1f3f5;
+  background-color: #E0F1F4; /* Light Blue Tint */
 }
-#continue-btn:hover{
-  background-color: #388E3C; /* Darker Green */
+
+#continue-btn {
+  background-color: #1E90FF; /* Dodger Blue */
 }
-#continue-btn{
-  background-color: #4CAF50; /* Green */
+
+#continue-btn:hover {
+  background-color: #1C75D6; /* Dark Dodger Blue */
 }
+
 #exit-btn {
-  background-color: #F44336; /* Red */
+  background-color: #FF6347; /* Tomato */
 }
 
 #exit-btn:hover {
   background-color: #C62828; /* Darker Red */
 }
+
 #restart-btn {
   background-color: #FF9800; /* Orange */
 }
 
 #restart-btn:hover {
   background-color: #F57C00; /* Darker Orange */
+}
+
+#export-btn {
+  background-color: #4CAF50; /* Green */
+}
+
+#export-btn:hover {
+  background-color: #388E3C; /* Darker Green */
 }
